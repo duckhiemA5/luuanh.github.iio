@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Space ✦</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+
+  <header>
+    <div class="logo">✦ MEMORY <span>SPACE</span></div>
+    <button class="add-btn" onclick="document.getElementById('files').click()">
+      ＋ Treo ảnh mới
+    </button>
+  </header>
+
+  <section class="intro">
+    <p class="eyebrow">YOUR LITTLE UNIVERSE</p>
+    <h1>Những khoảnh khắc<br><em>không muốn quên.</em></h1>
+    <p class="subtitle">
+      Mỗi tấm ảnh là một vì sao trong vũ trụ của riêng bạn.
+    </p>
+    <p class="hint">✦ Nhấn vào ảnh để xem kỷ niệm ✦</p>
+  </section>
+
+  <main>
+    <div class="gallery" id="gallery">
+      <div class="rope"></div>
+
+      <div class="empty" id="empty">
+        <div class="star">✧</div>
+        <h2>Vũ trụ đang chờ bạn</h2>
+        <p>Hãy treo tấm ảnh đầu tiên lên sợi dây ký ức.</p>
+        <button class="add-btn"
+          onclick="document.getElementById('files').click()">
+          ＋ Thêm ảnh đầu tiên
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer>MADE OF MEMORIES ✦ JUST FOR YOU</footer>
+
+  <input id="files" type="file" accept="image/*" multiple hidden>
+
+  <div class="viewer" id="viewer">
+    <button class="close" onclick="closeViewer()">×</button>
+    <img id="bigImage" alt="Ảnh kỷ niệm">
+    <h2 id="bigCaption"></h2>
+    <p id="bigDate"></p>
+    <button class="delete-btn" onclick="deleteCurrent()">
+      Xóa kỷ niệm
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
